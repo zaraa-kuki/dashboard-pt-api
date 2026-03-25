@@ -1,0 +1,135 @@
+       <!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+        /* 1. Mula-mula, overlay kita sembunyiin dulu */
+        .role-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(3, 37, 76, 0.9); /* Biru gelap transparan */
+            overflow: hidden;
+            width: 100%;
+            height: 0; /* Tinggi 0 biar gak kelihatan */
+            transition: .5s ease; /* Biar naiknya smooth (gak kaget) */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+        }
+
+        /* 2. Pas mouse Zara nyentuh kartu (Hover), tingginya jadi 100% */
+        .team-card:hover .role-overlay {
+            height: 100%;
+        }
+
+        /* 3. Styling teks & icon di dalem overlay */
+        .role-text {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .wa-icon-hover {
+            color: #25D366;
+            font-size: 30px;
+            transition: 0.3s;
+        }
+
+        .wa-icon-hover:hover {
+            transform: scale(1.2); /* Biar icon WA-nya nge-zoom dikit pas disentuh */
+        }
+        </style>
+       </head>
+       <body>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h2>Selamat Datang!</h2>
+            <p>Akses informasi jadwal perkuliahan Pribadi Teknik Informatika Polibatam-mu dalam satu pintu.</p>
+            <a href="login.php" class="btn-hero">Masuk</a>
+        </div>
+    </section>
+
+
+
+
+            <div class="team-card position-relative"> <img src="foto.jpg" alt="Zara">
+                <p class="fw-bold mb-0">Eka Mutia Lubis, S.Pd., M.Pd</p>
+                <p class="text-muted small">0004038905</p>
+
+                <div class="role-overlay">
+                    <div class="role-text">ANGGOTA TIM</div>
+                    <a href="https://wa.me/6282288190240" target="_blank" class="wa-icon-hover">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+
+        <!-- CAROUSEL -->
+        <div id="carouselExampleIndicators" class="carousel slide mt-4"
+            data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    class="active"></button>
+                <button type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slideto="1"></button>
+                <button type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slideto="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://picsum.photos/1200/400?random=1"
+                        class="d-block w-100" alt="Slide 1">
+                    <div
+                        class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                        <h5>Slide Pertama</h5>
+                        <p>Contoh gambar pertama pada carousel Bootstrap.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/1200/400?random=2"
+                        class="d-block w-100" alt="Slide 2">
+                    <div
+                        class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                        <h5>Slide Kedua</h5>
+                        <p>Tampilan responsif dan berganti otomatis.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://picsum.photos/1200/400?random=3"
+                        class="d-block w-100" alt="Slide 3">
+                    <div
+                        class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                        <h5>Slide Ketiga</h5>
+                        <p>Mudah dikustomisasi untuk promosi produk atau
+                            acara.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+       </body>
+       </html> 

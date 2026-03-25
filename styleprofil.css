@@ -1,0 +1,220 @@
+/* --- GLOBAL --- */
+body {
+    margin: 0;
+    padding-top: 80px;
+    overflow-x: hidden;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* --- NAVBAR --- */
+body header.navbar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    padding: 0% !important;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #03254C;
+    padding: 10px 60px 10px 0px;
+    color: #D0EFFF;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 70px;
+    width: 180px;
+    padding-left: 15px;
+}
+
+.nav-text h1 {
+    font-size: 21px;
+    margin: 0;
+    font-weight: 800;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-text p {
+    margin: 0;
+    font-size: 11px;
+    color: white;
+    font-weight: 600;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF762F;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* --- TEAM SECTION (REVISED FOR PROFILE PAGE) --- */
+.team-section {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Tambah padding bawah biar gak nempel footer */
+    padding: 60px 20px 120px 20px; 
+    background: linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);
+    color: #03254C;
+    /* Pastikan tinggi minimal biar konten gak kelipet */
+    min-height: 100vh; 
+}
+
+/* Container utama untuk grid */
+.team-container {
+    display: flex;
+    flex-direction: column; /* Biar bisa buat baris-baris (pembina, dev, anggota) */
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Hapus padding-left 80px yang lama biar simetris di tengah */
+    padding-left: 0; 
+}
+
+/* Baris khusus untuk Pembina & Dev (1 orang di tengah) */
+.team-row-single {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Baris untuk 12 Anggota (4 orang per baris di desktop) */
+.team-grid-members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+    gap: 30px;
+    width: 100%;
+    justify-items: center;
+}
+
+.team-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    width: 260px; /* Lebarin dikit biar pas */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #eee;
+}
+
+/* Efek Hover Tetap Pro */
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.team-card img {
+    width: 100%;
+    height: 250px; /* Ukuran foto lebih proporsional */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Khusus Baris Pembina/Ketua kasih border highlight */
+.card-highlight {
+    border-top: 5px solid #FF762F;
+}
+
+/* Sisa CSS Role-Overlay dan WA-Icon lo udah bagus, pertahanin aja */
+/* --- FOOTER --- */
+.footer {
+    background-color: #0E2A66;
+    font-family: Arial, sans-serif;
+    padding-top: 0;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: white;
+}
+
+.social-icon {
+    font-size: 22px;
+    color: white;
+    background-color: #0a1f4a;
+    padding: 8px 12px;
+    margin-top: 20px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #ffffff;
+    color: #0a1f4a;
+}
+
+.footer-bottom {
+    background-color: #FF762F;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 0px !important;
+}
+
+.footer-bottom p {
+    color: #ffffff;
+    text-align: center;
+    font-size: smaller;
+}
+
+.py-2 {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
