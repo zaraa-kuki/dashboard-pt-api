@@ -1,96 +1,3 @@
-/* --- GLOBAL --- */
-body {
-    margin: 0;
-    padding-top: 80px;
-    overflow-x: hidden;
-}
-
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-/* --- NAVBAR --- */
-body header.navbar {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    padding: 0% !important;
-    width: 100%;
-    z-index: 9999;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #03254C;
-    padding: 10px 60px 10px 0px;
-    color: #D0EFFF;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100000;
-}
-
-.nav-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo {
-    height: 70px;
-    width: 180px;
-    padding-left: 15px;
-}
-
-.nav-text h1 {
-    font-size: 21px;
-    margin: 0;
-    font-weight: 800;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.nav-text p {
-    margin: 0;
-    font-size: 11px;
-    color: white;
-    font-weight: 600;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    padding-right: 40px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #FF762F;
-}
-
-.menu-icon {
-    display: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-}
 
 /* --- TEAM SECTION (REVISED FOR PROFILE PAGE) --- */
 .team-section {
@@ -167,54 +74,44 @@ body header.navbar {
     margin-bottom: 15px;
 }
 
-/* Khusus Baris Pembina/Ketua kasih border highlight */
-.card-highlight {
-    border-top: 5px solid #FF762F;
-}
+        /* 1. Mula-mula, overlay kita sembunyiin dulu */
+        .role-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(3, 37, 76, 0.9); /* Biru gelap transparan */
+            overflow: hidden;
+            width: 100%;
+            height: 0; /* Tinggi 0 biar gak kelihatan */
+            transition: .5s ease; /* Biar naiknya smooth (gak kaget) */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+        }
 
-/* Sisa CSS Role-Overlay dan WA-Icon lo udah bagus, pertahanin aja */
-/* --- FOOTER --- */
-.footer {
-    background-color: #0E2A66;
-    font-family: Arial, sans-serif;
-    padding-top: 0;
-}
+        /* 2. Pas mouse Zara nyentuh kartu (Hover), tingginya jadi 100% */
+        .team-card:hover .role-overlay {
+            height: 100%;
+        }
 
-.footer p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: white;
-}
+        /* 3. Styling teks & icon di dalem overlay */
+        .role-text {
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-.social-icon {
-    font-size: 22px;
-    color: white;
-    background-color: #0a1f4a;
-    padding: 8px 12px;
-    margin-top: 20px;
-    border-radius: 6px;
-    transition: 0.3s;
-}
+        .wa-icon-hover {
+            color: #25D366;
+            font-size: 30px;
+            transition: 0.3s;
+        }
 
-.social-icon:hover {
-    background-color: #ffffff;
-    color: #0a1f4a;
-}
+        .wa-icon-hover:hover {
+            transform: scale(1.2); /* Biar icon WA-nya nge-zoom dikit pas disentuh */
+        }
 
-.footer-bottom {
-    background-color: #FF762F;
-    font-weight: bold;
-    font-size: 13px;
-    padding: 0px !important;
-}
-
-.footer-bottom p {
-    color: #ffffff;
-    text-align: center;
-    font-size: smaller;
-}
-
-.py-2 {
-    padding-top: 2px !important;
-    padding-bottom: 2px !important;
-}

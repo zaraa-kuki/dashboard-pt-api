@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styleindex.css" />
+    
+    <style>
+    .header {
+        position: relative;
+        height: 50vh;
+        width: 100%;
+        /* Pastikan path gambar 'kampung.jpeg' benar */
+        background: url('https://picsum.photos/300/200?random=5') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
+
+</head>
+
+<body>
+    <section class="header">
+        <div class="overlay"></div>
+    </section>
+
+
+
+            <!-- SECTION CARDS -->
+    <section class="team-section py-5">
+        <div class="container my-5" style="text-align: center;"> <h2 class="text-center mb-4" 
+                style="font-family: Arial, Helvetica, sans-serif; 
+                    font-weight: 800; 
+                    text-transform: uppercase; 
+                    letter-spacing: 3px; 
+                    color: #2c3e50; 
+                    border-bottom: 3px solid #ffd700; 
+                    display: table; 
+                    margin: 40px auto 1.5rem auto; 
+                    padding-bottom: 10px;">
+                Nama Produk
+            </h2>
+
+            <div style="max-width: 700px; margin: 0 auto; color: #000000; line-height: 1.6;">
+                <i class="fa-solid fa-desktop" style="font-size: 2rem; color: #2c3e50; margin-bottom: 15px;"></i>
+                <p style="font-size: 1.1rem;">
+                   PT Cahaya Mas Wigunajaya which is a trusted company running in marine supplier dedicated to providing high quality marine products 
+                   and services to meet the needs of our customers. We are committed to delivering excellent service and ensuring customer satisfaction through our wide range of marine products and solutions.
+                </p>
+            </div>
+
+            <hr style="width: 50%; margin: 3rem auto; opacity: 0.2; border-top: 2px solid #2c3e50;">
+
+            <div style="margin-top: 2rem;">
+                <p style="font-weight: 500; color: #333; margin-bottom: 15px;">
+                    Pemesanan dapat dilakukan melalui nomor di bawah ini:
+                </p>
+                    <a href="https://wa.me/6281372864065" target="_blank" style="text-decoration: none;">
+                        <button class="btn" 
+                                onmouseover="this.style.backgroundColor='#1ebd5e'; this.style.transform='scale(1.05)';" 
+                                onmouseout="this.style.backgroundColor='#25d366'; this.style.transform='scale(1)';"
+                                style="background-color: #25d366; 
+                                    color: white;
+                                    padding: 12px 30px; 
+                                    font-size: 1.1rem; 
+                                    border: none;
+                                    border-radius: 50px; 
+                                    display: inline-flex; 
+                                    align-items: center; 
+                                    gap: 10px; 
+                                    cursor: pointer;
+                                    transition: all 0.3s ease; /* Biar transisi warnanya halus, gak kaget */
+                                    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">
+                            <i class="fab fa-whatsapp" style="font-size: 1.4rem;"></i> 
+                            Pesan Sekarang
+                        </button>
+                    </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer" style="margin-top: 80px;">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>PT AGRI PRIMA INDOTAMA</h3>
+                <p>Marine Supplier | Ship Chandler | Marine Services</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li class="nav-links"><a href="index.html">Home</a></li>
+                    <li class="nav-links"><a href="tentang.html">About Us</a></li>
+                    <li class="nav-links"><a href="produk.html">Products</a></li>
+                    <li class="nav-links"><a href="profil.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Rotan Baru No. A9 Petisah Tengah, Medan</p>
+                <p><i class="fas fa-envelope"></i> tigor.api@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +62 813 7286 4065</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
