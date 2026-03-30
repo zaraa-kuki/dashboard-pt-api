@@ -16,10 +16,10 @@ body, html {
 /* --- HERO SECTION --- */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     /* Pastikan path gambar 'kampung.jpeg' benar */
-    background: url('kampung.jpeg') no-repeat center center/cover;
+    background: url('https://picsum.photos/300/200?random=5') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,49 +205,61 @@ body, html {
     opacity: 0.8;
 }
 
+/* Judul Footer (Dua-duanya sama) */
 .footer-links h4, .footer-contact h4 {
     font-size: 1.1rem;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     position: relative;
+    color: white;
+    font-weight: 700;
 }
 
-/* Garis bawah kecil di judul footer */
+/* Garis Kuning di bawah Judul */
 .footer-links h4::after, .footer-contact h4::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: -8px;
-    width: 40px;
+    width: 30px;
     height: 2px;
     background-color: #ffd700;
 }
 
-.footer-links ul {
+/* Reset List */
+.footer-links ul, .footer-links-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.footer-links ul li {
-    margin-bottom: 10px;
+/* Styling Link (Quick Links & Contact Us disamain) */
+.footer-links ul li, .footer-links-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center; /* Biar ikon & teks sejajar rata tengah */
 }
 
-.footer-links ul li a {
+.footer-links ul li a, .footer-links-list li a {
     color: white;
     text-decoration: none;
     font-size: 14px;
     transition: 0.3s;
-    opacity: 0.8;
+    opacity: 0.8; /* Biar kalem kayak Quick Links lo */
 }
 
-.footer-contact p {
-    font-size: 14px;
-    margin-bottom: 12px;
-    opacity: 0.8;
-}
-
-.footer-contact i {
-    margin-right: 10px;
+/* Efek Hover (Berubah warna & terang) */
+.footer-links ul li a:hover, .footer-links-list li a:hover {
     color: #ffd700;
+    opacity: 1; /* Pas disentuh mouse jadi terang */
+}
+
+/* Styling Khusus Ikon di Contact Us */
+.footer-links-list i {
+    color: #ffd700;
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+    font-size: 14px;
 }
 
 /* Social Icons */
