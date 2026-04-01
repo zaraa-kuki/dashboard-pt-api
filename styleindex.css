@@ -63,15 +63,23 @@ body, html {
 }
 
 .logo {
-    width: 50px;
+    width: 90px;
     height: auto; /* Biar logonya gak gepeng */
-    margin-right: 15px;
+    margin-right: 8px;
+    object-fit: contain;
 }
 
 /* Bungkus teks biar numpuk rapi */
 .brand-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    line-height: 1.1;
+}
+
+.brand-text span {
+    margin: 0; /* Pastiin nggak ada margin bawaan di tiap baris teks */
+    padding: 0;
 }
 
 .brand-text h1 {
