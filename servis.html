@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
 
-    <link rel="stylesheet" href="styleprofil.css" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="styleindex.css" />
 
+    <style>
+    .header {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    /* Pastikan path gambar 'kampung.jpeg' benar */
+    background: url('service.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    </style>
+
 </head>
 
 <body>
-    <section class="hero">
+    <section class="header">
         <div class="overlay"></div>
 
         <header class="navbar">
@@ -39,35 +51,39 @@
         </div>
     </section>
 
-    
-    <section class="team-section py-5" id="tim">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold" style="margin-top: 100px;">Contact Me</h2>
-                <p>Silakan hubungi saya jika ada yang ingin ditanyakan.</p>
-            </div>
-            
-            <hr class="my-5 opacity-25">
+     <section class="team-section py-5">
+        <div class="container my-5">
+             <h2 class="text-center mb-5" style="font-family: Arial, Helvetica, sans-serif; font-weight: 800; text-transform: uppercase; 
+                letter-spacing: 3px; color: #2c3e50; border-bottom: 3px solid #ffd700; display: table; margin: 80px auto 3rem auto; padding-bottom: 10px;">
+                Our Services
+            </h2>
 
-            <div class="row justify-content-center g-4">
-                <div class="col-md-3">
-                    <div class="team-card position-relative"> <img src="sampelfoto.jpeg" alt="Zara">
-                        <p class="fw-bold mb-0">Ir. Tigor Nainggolan</p>
-                        <p class="text-muted small">Director</p>
-
-                        <div class="role-overlay">
-                            <div class="role-text">Contact Person
-                            </div>
-                            <a href="https://wa.me/6281372864065" target="_blank" class="wa-icon-hover">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                        </div>
-                    </div>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                            
+                <div style="display: flex; align-items: center; border-bottom: 1px solid #e0e0e0; padding-bottom: 10px;">
+                    <i class="fa-solid fa-laptop" style="color: #007bff; font-size: 1.2rem; margin-right: 15px;"></i>
+                    <p style="margin: 0; font-size: 1.1rem; color: #333;">To deliver reliable and high quality marine supplies</p>
                 </div>
-            </div>
+
+                <div style="display: flex; align-items: center; border-bottom: 1px solid #e0e0e0; padding-bottom: 10px;">
+                    <i class="fa-solid fa-laptop" style="color: #007bff; font-size: 1.2rem; margin-right: 15px;"></i>
+                    <p style="margin: 0; font-size: 1.1rem; color: #333;">To provide cost effective solutions for the maritime industry</p>
+                </div>
+
+                <div style="display: flex; align-items: center; border-bottom: 1px solid #e0e0e0; padding-bottom: 10px;">
+                    <i class="fa-solid fa-laptop" style="color: #007bff; font-size: 1.2rem; margin-right: 15px;"></i>
+                    <p style="margin: 0; font-size: 1.1rem; color: #333;">To ensure outstanding customer service and support</p>
+                </div>
+
+                <div style="display: flex; align-items: center; border-bottom: 1px solid #e0e0e0; padding-bottom: 10px;">
+                    <i class="fa-solid fa-laptop" style="color: #007bff; font-size: 1.2rem; margin-right: 15px;"></i>
+                    <p style="margin: 0; font-size: 1.1rem; color: #333;">To foster long term relationships with clients and partners</p>
+                </div>
+            </div> 
 
         </div>
     </section>
+
 
     
     <footer class="footer" style="margin-top: 80px;">
