@@ -49,55 +49,43 @@ body, html {
     background: transparent; /* Tetap transparan agar gambar terlihat */
 }
 
-/* Brand (Logo + Teks di Kiri) */
+/* --- Perbaikan Sisi Kiri (Logo & Nama PT) --- */
+
 .nav-brand {
     display: flex;
-    align-items: center;
+    align-items: center; /* Ini kunci utama biar logo & teks sejajar tengah secara vertikal */
     color: white;
+    margin-top: 0; /* Pastikan gak ada dorongan dari atas */
 }
 
-/* Container utama (bungkus logo + teks) */
-.brand-container {
-    display: flex;
-    align-items: center; /* Biar logo sama teks sejajar tengah secara vertikal */
-}
-
-.logo {
-    width: 90px;
-    height: auto; /* Biar logonya gak gepeng */
-    margin-right: 8px;
-    object-fit: contain;
-}
-
-/* Bungkus teks biar numpuk rapi */
 .brand-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    line-height: 1.1;
-}
-
-.brand-text span {
-    margin: 0; /* Pastiin nggak ada margin bawaan di tiap baris teks */
-    padding: 0;
+    line-height: 1.9;
+    margin-left: 10px; /* Jarak antara logo dan teks */
 }
 
 .brand-text h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem; /* Kecilin dikit biar gak terlalu makan space vertikal */
     font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0; /* WAJIB: Hapus margin bawaan biar gak jauh sama teks bawah */
-    line-height: 1.2;
-    color: #ffffff;
+    margin: 0; /* Hapus semua margin bawaan browser */
+    padding: 0;
+    line-height: 1; /* Biar teksnya gak 'ngambang' */
 }
 
 .brand-text p {
-    font-size: 0.85rem; /* Gedein dikit biar kebaca */
-    font-weight: 300;   /* 300 terlalu tipis, 500 lebih pas buat sub-judul */
-    margin: 2px 0 0 0; /* Kasih jarak dikit aja (2px) di atas */
-    color: #f1f1f1;
-    text-transform: uppercase; /* Biar kelihatan tegas khas supplier */
-    letter-spacing: 0.5px;
+    font-size: 1rem; 
+    margin: 2px 0 0 0; /* Jarak tipis aja antara nama PT dan slogan */
+    padding: 0;
+    opacity: 0.9;
+}
+
+.logo {
+    width: 80px; /* Sesuaikan ukuran biar gak nendang tinggi navbar */
+    height: auto;
+    margin: 0;
+    display: block;
 }
 
 /* Links (Berjejer di Kanan) */
